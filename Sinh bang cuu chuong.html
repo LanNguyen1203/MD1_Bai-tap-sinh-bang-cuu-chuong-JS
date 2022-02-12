@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương (JS)</title>
+</head>
+<body>
+<script>
+    let bcc = `<table border="1">`;
+    let a = 2, b = 1;
+    // tạo hàng
+    while (b <= 9) {
+        bcc += `<tr>`;
+        // tạo cột
+        while (a <= 9) {
+            let multi = a * b;
+            let display = `${a} x ${b} = ${multi}`
+            // bcc += '<td> a + "x" + b + "=" + a*b </td>';
+            bcc =  `${bcc} <td> ${display} </td>`;
+            a++;
+        }
+        bcc = `${bcc} </tr>`
+        b++;
+        a = 2;
+    }
+    bcc = `${bcc}  </table>`;
+    document.write(bcc);
+</script>
+</body>
+</html>
